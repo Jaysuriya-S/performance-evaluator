@@ -5,6 +5,13 @@ import './manager.css';
 const Dashboard = () => {
   const navigate = useNavigate();
 
+  // Dummy data for now
+  const stats = {
+    total_users: 10,
+    attended: 6,
+    not_attended: 4
+  };
+
   return (
     <div className="manager-dashboard">
       <div className="sidebar">
@@ -16,23 +23,26 @@ const Dashboard = () => {
           <li onClick={() => navigate('/')}>Logout</li>
         </ul>
       </div>
+
       <div className="dashboard-content">
         <div className="dashboard-header">
           <h1>Welcome, Manager</h1>
           <p>Manage tests, users and analyze performance insights.</p>
         </div>
-        <div className="dashboard-actions">
-          <div className="card" onClick={() => navigate('/manager/userlist')}>
-            <h3>View Users</h3>
-            <p>Check all registered users and their details.</p>
+
+        {/* ✅ Stats Box only */}
+        <div className="stats-summary">
+          <div className="stat-card">
+            <h4>Total Users</h4>
+            <p>{stats.total_users}</p>
           </div>
-          <div className="card" onClick={() => navigate('/manager/createtest')}>
-            <h3>Create Test</h3>
-            <p>Assign skill-based questions to users.</p>
+          <div className="stat-card">
+            <h4>Attended</h4>
+            <p>{stats.attended}</p>
           </div>
-          <div className="card" onClick={() => navigate('/manager/performance-report')}>
-            <h3>Performance Reports</h3>
-            <p>Analyze test performance and insights.</p>
+          <div className="stat-card">
+            <h4>Not Attended</h4>
+            <p>{stats.not_attended}</p>
           </div>
         </div>
       </div>
