@@ -1,0 +1,154 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #e0f2f1);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styles - slightly increased height */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0097a7;
+  padding: 14px 30px; /* Slightly increased padding */
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .logo {
+  font-size: 20px; /* Slightly increased font size */
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  cursor: pointer;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li:hover {
+  color: #e0f7fa;
+}
+
+/* Container with glass effect */
+.skill-form-container {
+  max-width: 650px;
+  margin: 80px auto;
+  padding: 35px 40px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 18px;
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  box-shadow: 0 8px 32px rgba(0, 128, 128, 0.25), 0 0 10px rgba(0, 128, 128, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 38px rgba(0, 128, 128, 0.3), 0 0 20px rgba(0, 128, 128, 0.15);
+}
+
+.skill-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00796b;
+  font-size: 22px;
+}
+
+/* Form Styles */
+.skill-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-form label {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #004d40;
+}
+
+/* Inputs */
+.skill-form input[type="email"],
+.skill-form input[type="password"] {
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.skill-form input:focus {
+  outline: none;
+  border-color: #26a69a;
+  box-shadow: 0 0 5px rgba(38, 166, 154, 0.3);
+}
+
+/* Skill Dropdown */
+.basic-multi-select {
+  margin-top: 10px;
+}
+
+/* Submit Button */
+.submit-btn {
+  margin-top: 30px;
+  padding: 12px;
+  background-color: #009688;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.submit-btn:hover {
+  background-color: #00796b;
+  transform: scale(1.03);
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .skill-form-container {
+    margin: 60px 20px;
+    padding: 30px 25px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
