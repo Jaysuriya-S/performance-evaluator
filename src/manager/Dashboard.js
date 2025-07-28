@@ -1,16 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import './manager.css';
 
 const Dashboard = () => {
   const navigate = useNavigate();
 
-  // Dummy data for now
-  const stats = {
-    total_users: 10,
-    attended: 6,
-    not_attended: 4
-  };
+  const [stats, setStats] = useState({
+    total_users: 0,
+    attended: 0,
+    not_attended: 0,
+  });
+
+  useEffect(() => {
+    axios.get('http://127.0.0.1:8000/auth/user-stats/')
+      .then((res) => {
+        const total = res.data.total_users;
+        const attended = res.data.submitted_users;
+        const not_attended = total - attended;
+
+        setStats({
+          total_users: total,
+          attended: attended,
+          not_attended: not_attended,
+        });
+      })
+      .catch((err) => {
+        console.error('❌ Failed to fetch user stats:', err);
+      });
+  }, []);
 
   return (
     <div className="manager-dashboard">
@@ -30,7 +48,7 @@ const Dashboard = () => {
           <p>Manage tests, users and analyze performance insights.</p>
         </div>
 
-        {/* ✅ Stats Box only */}
+        {/* ✅ Live Stats Box */}
         <div className="stats-summary">
           <div className="stat-card">
             <h4>Total Users</h4>
