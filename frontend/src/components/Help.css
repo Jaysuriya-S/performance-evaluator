@@ -1,0 +1,102 @@
+
+/* src/components/Help.css */
+
+.help-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #263238;
+  box-sizing: border-box;
+}
+
+.help-container {
+  background: #ffffff;
+  max-width: 900px;
+  width: 100%;
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.help-container h1 {
+  font-size: 2.4rem;
+  color: #00796b;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+.intro {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: #455a64;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.help-section {
+  margin-bottom: 40px;
+}
+
+.help-section h2 {
+  font-size: 1.6rem;
+  color: #004d40;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-left: 5px solid #00796b;
+  padding-left: 15px;
+}
+
+.help-section p,
+.help-section ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #37474f;
+  margin-bottom: 20px;
+}
+
+.help-section ul {
+  padding-left: 25px;
+  list-style-type: disc;
+}
+
+.help-section ul li {
+  margin-bottom: 10px;
+}
+
+.help-section a {
+  color: #00796b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.help-section a:hover {
+  color: #004d40;
+  text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .help-container {
+    padding: 30px 20px;
+  }
+  
+  .help-container h1 {
+    font-size: 1.8rem;
+  }
+  
+  .help-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .help-section p,
+  .help-section ul {
+    font-size: 0.95rem;
+  }
+}

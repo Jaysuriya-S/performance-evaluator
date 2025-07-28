@@ -1,0 +1,21 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: #0097a7; /* SkillSight color */
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: gold;
+}

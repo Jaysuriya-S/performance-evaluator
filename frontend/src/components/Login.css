@@ -1,0 +1,132 @@
+/* Elegant Login Page Design */
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #90D1CA, #129990, #096B68);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-box {
+  background: #fff;
+  border-radius: 20px;
+  padding: 50px 40px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 420px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.login-box h2 {
+  margin-bottom: 10px;
+  color: #096B68;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.subtext {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #90D1CA;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #129990;
+  box-shadow: 0 0 5px rgba(18, 153, 144, 0.4);
+}
+
+.error {
+  color: #d93025;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: #096B68;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.link-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.link-group .link {
+  font-size: 15px;
+  font-weight: 600;
+  color: #129990;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link-group .link:hover {
+  color: #096B68;
+  text-decoration: underline;
+}
+
+.glow-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #129990;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(18, 153, 144, 0.3);
+}
+
+.glow-btn:hover {
+  background-color: #096B68;
+  transform: scale(1.02);
+}
+
+.register-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #129990;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link a:hover {
+  color: #096B68;
+  text-decoration: underline;
+}

@@ -1,0 +1,3 @@
+[submodule "skillog-frontend-"]
+	path = skillog-frontend-
+	url = https://github.com/SKILL-OG/skillog-frontend-.git
