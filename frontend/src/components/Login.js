@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
@@ -44,7 +43,14 @@ const Login = () => {
         if (token) {
           localStorage.setItem('authToken', token);
           setSuccess('Login successful! Redirecting...');
-          setTimeout(() => navigate('/dashboard'), 1500);
+
+          // ✅ Redirect based on username
+          if (username.trim() === "admin@123") {
+            setTimeout(() => navigate('/dashboard'), 1500); // Admin Dashboard
+          } else {
+            setTimeout(() => navigate('/skills'), 1500); // Normal User Skill Form
+          }
+
         } else {
           setError('Login succeeded but no token received.');
         }
